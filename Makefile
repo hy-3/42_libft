@@ -24,7 +24,8 @@ SRC = \
 	ft_strnstr.c \
 	ft_atoi.c \
 	ft_calloc.c \
-	#ft_strdup \
+	ft_strdup.c \
+	# Part2 & bonus
 
 OBJ = $(SRC:%.c=%.o)
 

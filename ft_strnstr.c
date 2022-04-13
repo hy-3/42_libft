@@ -16,7 +16,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			flag = 1;
 		}
 		if (needle[count] == '\0')
-			return (char *)(haystack - count);
+			return ((char *)(haystack - count));
 		if (flag == 0)
 			haystack++;
 	}

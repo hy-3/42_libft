@@ -10,11 +10,3 @@ int	ft_strlen(char *str)
 	}
 	return (count);
 }
-
-
-#include <stdio.h>
-int main()
-{
-	int r = ft_strlen("abcdef");
-	printf("%d", r);
-}

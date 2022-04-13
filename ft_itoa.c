@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hiyamamo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/13 17:36:33 by hiyamamo          #+#    #+#             */
+/*   Updated: 2022/04/13 17:36:35 by hiyamamo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
 int	count_digits(int n)
@@ -21,8 +33,8 @@ void	add_minus_sign(char *res, int original_n)
 
 char	*ft_itoa(int n)
 {
-	int	original_n;
-	int	digit;
+	int		original_n;
+	int		digit;
 	char	*res;
 
 	original_n = n;

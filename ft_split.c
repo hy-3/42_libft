@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hiyamamo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/13 17:38:15 by hiyamamo          #+#    #+#             */
+/*   Updated: 2022/04/13 17:38:16 by hiyamamo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stddef.h>
 #include <stdlib.h>
 
@@ -77,7 +89,7 @@ void	free_if_malloc_failed(char **res, int num_of_strings)
 
 char	**ft_split(char const *s, char c)
 {
-	int	num_of_strings;
+	int		num_of_strings;
 	char	**res;
 
 	num_of_strings = count_num_of_strings(s, c);

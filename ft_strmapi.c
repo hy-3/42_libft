@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hiyamamo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/13 17:39:09 by hiyamamo          #+#    #+#             */
+/*   Updated: 2022/04/13 17:39:10 by hiyamamo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
 int	count_len_of_str(char const *s)
@@ -14,8 +26,8 @@ int	count_len_of_str(char const *s)
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	len_of_s;
-	int	i;
+	int		len_of_s;
+	int		i;
 	char	*res;
 
 	len_of_s = count_len_of_str(s);

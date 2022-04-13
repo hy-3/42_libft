@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hiyamamo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/13 17:39:50 by hiyamamo          #+#    #+#             */
+/*   Updated: 2022/04/13 17:39:51 by hiyamamo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
 int	find_index_of_trimmed_start(char const *s1, char const *set)
@@ -55,9 +67,9 @@ int	find_index_of_trimmed_end(char const *s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	index_of_start;
-	int	index_of_end;
+	int		i;
+	int		index_of_start;
+	int		index_of_end;
 	char	*res;
 
 	i = 0;

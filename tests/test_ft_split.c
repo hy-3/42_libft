@@ -4,7 +4,7 @@
 
 int	main(void)
 {
-	char s[50] = "  abc i 123 xxx ..dasfd gff  abc ";
+	char s[50] = "  abc i 123 NULL ..dasfd gff  abc ";
 	char c = ' ';
 
 	char **r = ft_split(s, c);

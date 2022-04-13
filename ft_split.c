@@ -71,6 +71,7 @@ void	free_if_malloc_failed(char **res, int num_of_strings)
 			i++;
 		}
 		free(res);
+		res = NULL;
 	}
 }
 

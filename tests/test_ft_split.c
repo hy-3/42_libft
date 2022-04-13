@@ -4,13 +4,13 @@
 
 int	main(void)
 {
-	char s[30] = "  abc i 123 xxx ..";
+	char s[50] = "  abc i 123 xxx ..dasfd gff  abc ";
 	char c = ' ';
 
 	char **r = ft_split(s, c);
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 8; i++)
 	{
-		printf("%s\n", r[i]);
+		printf("[res] i:%i p:%p s:%s\n", i, r[i],r[i]);
 	}
 	return (0);
 }

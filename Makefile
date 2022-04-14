@@ -71,3 +71,5 @@ fclean: clean
 #TODO change to delete obj from bonus as well.
 clean:
 	rm $(MANDATORY_OBJ) 
+
+PONHY: all bonus re %.o fclean clean

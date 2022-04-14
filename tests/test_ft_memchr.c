@@ -14,5 +14,9 @@ int	main(void)
 	unsigned char *r_o = memchr(s_o, c, n);
 	unsigned char *r_m = ft_memchr(s_m, c, n);
 	printf("o: %s\nm: %s\n", r_o, r_m);
+
+	int tab[7] = {-49, 49, 1, -1, 0, -2, 2};
+
+	printf("o: %s\nm:%s\n", (char *)memchr(tab, -1, 7), (char *)ft_memchr(tab, -1, 7));
 	return (0);
 }

@@ -17,8 +17,9 @@ int	main(void)
 	
 	ft_lstadd_front(&b, c);
 
-	printf("%i\n", ft_lstsize(a));
-	printf("%i\n", ft_lstsize(b));
-	printf("%i\n", ft_lstsize(c));
+	printf("addr of c: %p\n", c);
+	printf("a's last node: %p\n", ft_lstlast(a));
+	printf("b's last node: %p\n", ft_lstlast(b));
+	printf("c's last node: %p\n", ft_lstlast(c));
 	return (0);
 }

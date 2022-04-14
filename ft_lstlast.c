@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hiyamamo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 16:24:17 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/14 16:24:28 by hiyamamo         ###   ########.fr       */
+/*   Created: 2022/04/14 16:24:08 by hiyamamo          #+#    #+#             */
+/*   Updated: 2022/04/14 16:24:10 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	count;
-	t_list	*current_position;
+	t_list	*current_node;
+	t_list	*current_next;
 
-	count = 1;
-	current_position = lst->next;
-	while (current_position != NULL)
+	current_node = lst;
+	current_next = lst->next;
+	while (current_next != NULL)
 	{
-		count++;
-		current_position = current_position->next;
+		current_node = current_next;
+		current_next = current_next->next;
 	}
-	return (count);
+	return (current_node);
 }
+

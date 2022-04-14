@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hiyamamo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 16:24:17 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/14 16:24:28 by hiyamamo         ###   ########.fr       */
+/*   Created: 2022/04/14 16:23:39 by hiyamamo          #+#    #+#             */
+/*   Updated: 2022/04/14 16:23:41 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int	count;
-	t_list	*current_position;
+	t_list	*current_addr;
+	t_list	*current_next;
 
-	count = 1;
-	current_position = lst->next;
-	while (current_position != NULL)
+	current_addr = *lst;
+	while (current_addr != NULL)
 	{
-		count++;
-		current_position = current_position->next;
+		current_next = current_addr->next;
+		del(current_addr->content);
+		free(current_addr);
+		current_addr = current_next;
 	}
-	return (count);
+	*lst = NULL;
 }

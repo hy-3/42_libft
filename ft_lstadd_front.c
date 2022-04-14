@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 17:34:44 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/14 10:06:44 by hiyamamo         ###   ########.fr       */
+/*   Created: 2022/04/14 11:18:25 by hiyamamo          #+#    #+#             */
+/*   Updated: 2022/04/14 11:38:21 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
-{
-	int	i;
-	int	res;
-	int	sign;
+#include "libft.h"
 
-	i = 0;
-	sign = 1;
-	res = 0;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t')
-		i++;
-	if (str[i] == '-')
-	{
-		i++;
-		sign = -1;
-	}
-	while ('0' <= str[i] && str[i] <= '9' && str[i] != '\0')
-	{
-		res = res * 10 + str[i] - '0';
-		i++;
-	}	
-	return (res * sign);
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	(*lst)->next = new;
 }

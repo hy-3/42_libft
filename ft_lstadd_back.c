@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiyamamo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:23:57 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/14 16:23:58 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/14 18:05:27 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	current_node->next = new;
 }
-

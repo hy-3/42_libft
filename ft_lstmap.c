@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:24:56 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/14 17:59:31 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/14 18:06:01 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*old;
 	t_list	*new;
 	t_list	*res;
-	int	count;
+	int		count;
 
 	count = 0;
 	old = NULL;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiyamamo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:24:08 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/14 16:24:10 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/14 18:05:41 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (current_node);
 }
-

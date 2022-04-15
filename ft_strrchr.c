@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:39:43 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/15 13:56:42 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/15 21:26:30 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ char	*ft_strrchr(const char *s, int c)
 	while (len_s > 0)
 	{
 		if (*(s + len_s) == (char) c)
-			return ((char *) (s + len_s));
+			return ((char *)(s + len_s));
 		len_s--;
 	}
 	if (*(s + len_s) == (char) c)
-		return ((char *) (s + len_s));
+		return ((char *)(s + len_s));
 	return (NULL);
 }

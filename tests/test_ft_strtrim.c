@@ -4,8 +4,8 @@
 
 int	main(void)
 {
-	char s1[30] = "   xx hello worldx. x     ";
-	char set[3] = "x ";
+	char *s1 = "  \t \t \n   \n\n\n\t";
+	char *set = " \n\t";
 	printf("%s\n",ft_strtrim(s1, set));
 	return (0);
 }

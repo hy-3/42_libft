@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:39:23 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/15 14:10:16 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/15 21:25:05 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@
  * @param s1(const char *): Source string to compare
  * @param s2(const char *): Source string to compare
  * @param n(size_t): Number of char to compare
- * @return (int): Whenever the difference found, they return char difference as int which euqals to (s1's char - s2's char).
+ * @return (int): Whenever the difference found, 
+ * they return char difference as int 
+ * which euqals to (s1's char - s2's char).
  */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

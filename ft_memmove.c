@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:37:10 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/15 11:38:52 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/15 21:25:57 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /**
  * @brief Copy [len] bytes from [src] to [dst].
- * memmove is safer than memcpy like when [src] and [dst] memory areas are overlapped.
+ * it is safer than memcpy when [src] and [dst] memory areas are overlapped.
  *
  * @param dst(void *): Pointer to destination memory area.
  * @param src(const void *): Pointer to source memory area.

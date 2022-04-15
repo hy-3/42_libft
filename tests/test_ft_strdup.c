@@ -6,7 +6,7 @@
 
 int	main(void)
 {
-	char *s = "abcdefh";
+	char *s = "abc";
 
 	char *r_o = strdup(s);
 	char *r_m = ft_strdup(s);

@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:39:09 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/15 10:53:48 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/15 20:12:54 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	char	*res;
 
+	if (s == NULL)
+		return (NULL);
 	len_of_s = count_len_of_str(s);
 	res = (char *) malloc((len_of_s + 1) * sizeof(char));
 	if (res == NULL)

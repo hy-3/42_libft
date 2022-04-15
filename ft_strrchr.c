@@ -3,26 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiyamamo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:39:43 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/13 17:39:44 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/15 13:56:42 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+size_t	ft_strlen(const char *str);
+
+/**
+ * @brief Find the last occurrence of [c] from [s].
+ * \0 is considered as part of source.
+ *
+ * @param s(const char *): Pointer to source.
+ * @param c(int): Char which will be looked for.
+ * @return (char *): Pointer of last occurence of [c].
+ */
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int	len_s;
+	size_t	len_s;
 
-	len_s = 0;
-	while (*s++ != '\0')
-		len_s++;
-	if (c == 0)
-		return ((char *) s);
-	while (len_s-- > 0)
-		if (*--s == c)
-			return ((char *) s);
+	len_s = ft_strlen(s);
+	while (len_s > 0)
+	{
+		if (*(s + len_s) == (char) c)
+			return ((char *) (s + len_s));
+		len_s--;
+	}
+	if (*(s + len_s) == (char) c)
+		return ((char *) (s + len_s));
 	return (NULL);
 }

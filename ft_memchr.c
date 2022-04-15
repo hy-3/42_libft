@@ -3,25 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiyamamo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:36:42 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/13 17:36:46 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/15 12:06:21 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+/**
+ * @brief Find the first occurence of [c] from [s].
+ *
+ * @param s(void *): Pointer to source.
+ * @param c(int): Char which will be looked for.
+ * @param n(size_t): Bytes to look for.
+ * @return (void *): Pointer to the byte located or NULL if [c] doesn't exist in [n] bytes.
+ */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*char_s;
+	unsigned char	*tmp_s;
+	unsigned char	tmp_c;
 
-	char_s = (unsigned char *) s;
-	while (n--)
+	tmp_s = (unsigned char *) s;
+	tmp_c = c;
+	while (n-- > 0)
 	{
-		if (*char_s == c)
-			return (char_s);
-		char_s++;
+		if (*tmp_s == tmp_c)
+			return (tmp_s);
+		tmp_s++;
 	}
 	return (NULL);
 }

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiyamamo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:36:25 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/13 17:36:26 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/15 12:09:10 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int i)
 {
-	if (32 <= i && i <= 127)
+	if (31 < i && i < 127)
 		return (1);
 	else
 		return (0);

@@ -11,7 +11,6 @@ int	main(void)
 	printf("%s\n", ft_itoa(-2147483647));
 	printf("%s\n", ft_itoa(0));
 	printf("%s\n", ft_itoa(1000));
-	printf("%s", ft_itoa(-2147483648LL));
-	printf("a");
+	printf("%s\n", ft_itoa(-2147483648LL));
 	return (0);
 }

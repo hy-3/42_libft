@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:38:51 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/16 19:33:46 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/16 19:42:41 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,6 @@ size_t	ft_strlen(const char *str);
  * @return IF (length of [dst] < [dstsize]) -> length of [src] + length of [dst]
  *         ELSE -> length of [src] + [dstsize].
  */
-
-#include <stdio.h>
-
-
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	res;
@@ -35,9 +31,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	k;
 
 	res = ft_strlen(src);
-	i = 0;
-	// while (dst[i] != '\0')
-	// 	i++;
 	i = ft_strlen(dst);
 	if (i < dstsize)
 	{
@@ -47,9 +40,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 			dst[i++] = src[k++];
 	}
 	else
-	{
 		return (res + dstsize);
-	}
 	if ((dstsize - i) == 0)
 		i -= 1;
 	dst[i] = '\0';

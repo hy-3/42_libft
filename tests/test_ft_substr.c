@@ -6,12 +6,11 @@
 
 int	main(void)
 {
-	char const *s1 = "01234";
-	unsigned int start1 = 10;
-	size_t len1 = 10;
+	char const *s1 = "1";
+	unsigned int start1 = 42;
+	size_t len1 = 4200000;
 
 	printf("%s\n", ft_substr(s1, start1, len1));
-
 
 	return (0);
 }

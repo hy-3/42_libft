@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:39:56 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/15 20:38:47 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/16 16:39:15 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,24 @@
 #include <stdlib.h>
 
 size_t	ft_strlen(const char *str);
+
+char	*cust_malloc(unsigned int start, size_t len, size_t len_s, int flag)
+{
+	char	*res;
+
+	if (flag == 1)
+		res = (char *) malloc(1 * sizeof(char));
+	else
+	{
+		if (len_s < len)
+			res = (char *) malloc((len_s - start + 1) * sizeof(char));
+		else
+			res = (char *) malloc((len + 1) * sizeof(char));
+	}
+	if (res == NULL)
+		return (NULL);
+	return (res);
+}
 
 /**
  * @brief Get substring from [s]. It begins from [start] and max isze of [len]
@@ -25,17 +43,19 @@ size_t	ft_strlen(const char *str);
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*res;
+	size_t			len_s;
 	unsigned int	i;
+	char			*res;
 
-	res = malloc((len + 1) * sizeof(char));
-	if (res == NULL || s == NULL)
+	if (s == NULL)
 		return (NULL);
+	len_s = ft_strlen(s);
 	i = 0;
-	if (ft_strlen(s) < start)
-		res[0] = '\0';
+	if (len_s < start)
+		res = cust_malloc(start, len, len_s, 1);
 	else
 	{
+		res = cust_malloc(start, len, len_s, 0);
 		while (*(s + start) != '\0' && len > 0)
 		{
 			res[i] = *(s + start);
@@ -44,6 +64,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			i++;
 		}
 	}
-	res[i] = '\0';
+	if (res != NULL)
+		res[i] = '\0';
 	return (res);
 }

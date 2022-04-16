@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:39:56 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/16 16:39:15 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/16 17:17:21 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	else
 	{
 		res = cust_malloc(start, len, len_s, 0);
+		if (res == NULL)
+			return (NULL);
 		while (*(s + start) != '\0' && len > 0)
 		{
-			res[i] = *(s + start);
+			res[i++] = *(s + start++);
 			len--;
-			start++;
-			i++;
 		}
 	}
 	if (res != NULL)

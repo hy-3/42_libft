@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:24:56 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/14 18:06:01 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/16 14:02:10 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,19 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	old = NULL;
 	new = NULL;
 	res = NULL;
+	if (lst == NULL)
+		return (NULL);
 	while (lst != NULL)
 	{
 		old = new;
 		new = ft_lstnew(f(lst->content));
 		if (new == NULL)
 			del(new->content);
-		if (count == 0)
+		if (count++ == 0)
 			res = new;
 		else
 			old->next = new;
 		lst = lst->next;
-		count++;
 	}
 	new->next = NULL;
 	return (res);

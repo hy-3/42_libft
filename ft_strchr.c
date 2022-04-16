@@ -3,15 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiyamamo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:38:20 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/13 17:38:21 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/16 14:16:59 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+/**
+ * @brief Find first occurence of [c] from [s].
+ * 
+ * @param s(const char *): Source string to be looked for.
+ * @param c(int): Char that it will look for.
+ * @return (char *): Pointer to [c] or NULL if [c] doesn't appear.
+ */
 char	*ft_strchr(const char *s, int c)
 {
 	char	*new_s;
@@ -19,7 +26,7 @@ char	*ft_strchr(const char *s, int c)
 	new_s = (char *) s;
 	while (*new_s != '\0')
 	{
-		if (*new_s == c)
+		if (*new_s == (char) c)
 			return (new_s);
 		new_s++;
 	}

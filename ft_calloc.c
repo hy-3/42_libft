@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:35:11 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/15 19:34:33 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/16 15:49:43 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 
 /**
- * @brief Allocates [count] objects whic are [size] bytes to memory.
+ * @brief Allocates [count] objects which are [size] bytes to memory.
  * 
  * @param count(size_t): Number of objects
  * @param size(size_t): Byte sizes.
@@ -25,6 +25,8 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char	*res;
 	size_t			total;
 
+	if (count > SIZE_MAX / size)
+		return (NULL);
 	total = count * size;
 	res = malloc(total);
 	if (res == NULL)

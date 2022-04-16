@@ -9,15 +9,13 @@ int	main(void)
 	size_t c = 10;
 	size_t s = 4;
 
-	int *r_o = calloc(c, s);
-	int *r_m = ft_calloc(c, s);
+	char *r_o = calloc(SIZE_MAX, SIZE_MAX);
+	char *r_m = ft_calloc(SIZE_MAX, SIZE_MAX);
 
 	printf("-- O --\n");
-	for (size_t i = 0; i < 10; i++)
-		printf("%d ", r_o[i]);
+	printf("%s ", r_o);
 	printf("\n-- M --\n");
-	for (size_t i = 0; i < 10; i++)
-		printf("%d ", r_m[i]);
+	printf("%s ", r_m);
 	printf("\n");
 
 	return (0);

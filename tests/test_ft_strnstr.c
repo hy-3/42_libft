@@ -6,11 +6,11 @@
 
 int	main(void)
 {
-	size_t n = -1;
-	char *h_o = "is there a nyacat ?";
-	char *nee_o = "is there a nyacat ?";
-	char *h_m = "is there a nyacat ?";
-	char *nee_m = "is there a nyacat ?";
+	size_t n = 9;
+	char *h_o = "aaabcabcd";
+	char *nee_o = "abcd";
+	char *h_m = "aaabcabcd";
+	char *nee_m = "abcd";
 
 	char *r_o = strnstr(h_o, nee_o, n);
 	char *r_m = ft_strnstr(h_m, nee_m, n);

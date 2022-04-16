@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiyamamo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:38:15 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/13 17:38:16 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/16 10:43:14 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ void	fill_string_in_array(char const *s, char c, char **res)
 		if (s[i] != c)
 		{
 			start = i;
-			while (s[i++] != c && s[i] != '\0')
-				continue ;
+			while (s[i] != c && s[i] != '\0')
+				i++;
 			res[++k] = (char *) malloc((i - start + 1) * sizeof(char));
 			if (res[k] == NULL)
 				continue ;
@@ -87,11 +87,20 @@ void	free_if_malloc_failed(char **res, int num_of_strings)
 	}
 }
 
+/**
+ * @brief Split [s] based on [c] delimiter.
+ *
+ * @param c(char): Delimiter.
+ * @param s(char const *s): Source string to split.
+ * @return (char **): The array of string which has each splitted string.
+ */
 char	**ft_split(char const *s, char c)
 {
 	int		num_of_strings;
 	char	**res;
 
+	if (s == NULL)
+		return (NULL);
 	num_of_strings = count_num_of_strings(s, c);
 	res = (char **) malloc((num_of_strings + 1) * sizeof(char *));
 	if (res == NULL)

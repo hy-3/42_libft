@@ -1,6 +1,7 @@
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
 NAME = libft.a
+CUSTOM_SRC = cust_count_digits.c
 PART1_SRC = \
 	ft_isalpha.c \
 	ft_isdigit.c \
@@ -37,7 +38,7 @@ PART2_SRC = \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
-MANDATORY_SRC = $(PART1_SRC) $(PART2_SRC)
+MANDATORY_SRC = $(PART1_SRC) $(PART2_SRC) $(CUSTOM_SRC)
 MANDATORY_OBJ = $(MANDATORY_SRC:%.c=%.o)
 
 BONUS_SRC = \

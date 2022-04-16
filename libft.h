@@ -9,6 +9,9 @@ typedef struct	s_list
 	struct s_list	*next;
 }	t_list;
 
+// Custom
+int	cust_count_digits(int n);
+
 // Part1
 int	ft_isalpha(int i);
 int	ft_isdigit(int i);

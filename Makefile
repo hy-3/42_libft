@@ -60,17 +60,19 @@ $(NAME): $(MANDATORY_OBJ)
 
 bonus: $(MANDATORY_OBJ) $(BONUS_OBJ)
 	ar -rcs $(NAME) $(MANDATORY_OBJ) $(BONUS_OBJ)
+	
 
 %.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@
 
+#TODO check why it fails with war-room.
 re: fclean all
 
 fclean: clean
-	rm $(NAME)
+	rm -f $(NAME)
 
 #TODO change to delete obj from bonus as well.
 clean:
-	rm $(MANDATORY_OBJ) 
+	rm -f $(MANDATORY_OBJ) $(BONUS_OBJ)
 
 PONHY: all bonus re %.o fclean clean

@@ -9,6 +9,7 @@ typedef struct	s_list
 	struct s_list	*next;
 }	t_list;
 
+//TODO chech if custom can be included
 // Custom
 int	cust_count_digits(int n);
 

@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:36:33 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/16 12:02:10 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/16 18:31:53 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ char	*deal_with_edge_case(char *res, int original_n)
 		res[8] = '6';
 		res[9] = '4';
 		res[10] = '8';
+		res[11] = '\0';
 	}
 	return (res);
 }

@@ -1,6 +1,7 @@
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
 NAME = libft.a
+
 PART1_SRC = \
 	ft_isalpha.c \
 	ft_isdigit.c \
@@ -55,11 +56,10 @@ BONUS_OBJ = $(BONUS_SRC:%.c=%.o)
 all: $(NAME)
 
 $(NAME): $(MANDATORY_OBJ)
-	ar -rcs $(NAME) $(MANDATORY_OBJ)
+	@ar -rcs $(NAME) $(MANDATORY_OBJ)
 
-#TODO not to re run ar command.
 bonus: $(MANDATORY_OBJ) $(BONUS_OBJ)
-	ar -rcs $(NAME) $(MANDATORY_OBJ) $(BONUS_OBJ)
+	@make MANDATORY_OBJ="$(MANDATORY_OBJ) $(BONUS_OBJ)"
 
 %.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@
@@ -67,10 +67,11 @@ bonus: $(MANDATORY_OBJ) $(BONUS_OBJ)
 re: fclean all
 
 fclean: clean
-	rm -f $(NAME)
+	@echo "Deleting $(NAME)"
+	@rm -f $(NAME)
 
 clean:
-	rm -f $(MANDATORY_OBJ) $(BONUS_OBJ)
+	@echo "Deleting object files"
+	@rm -f $(MANDATORY_OBJ) $(BONUS_OBJ)
 
-#TODO learn about it.
 .PONHY: all bonus re fclean clean

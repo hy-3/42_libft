@@ -58,8 +58,11 @@ all: $(NAME)
 $(NAME): $(MANDATORY_OBJ)
 	@ar -rcs $(NAME) $(MANDATORY_OBJ)
 
-bonus: $(MANDATORY_OBJ) $(BONUS_OBJ)
-	@make MANDATORY_OBJ="$(MANDATORY_OBJ) $(BONUS_OBJ)"
+bonus: .bonus
+
+.bonus: $(MANDATORY_OBJ) $(BONUS_OBJ)
+	@touch .bonus
+	@ar -rcs $(NAME) $(MANDATORY_OBJ) $(BONUS_OBJ)
 
 %.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@
@@ -73,5 +76,6 @@ fclean: clean
 clean:
 	@echo "Deleting object files"
 	@rm -f $(MANDATORY_OBJ) $(BONUS_OBJ)
+	@rm -f .bonus
 
 .PONHY: all bonus re fclean clean

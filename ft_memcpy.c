@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:37:02 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/15 11:38:37 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/19 11:17:06 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		return (dst);
 	tmp_dst = (unsigned char *) dst;
 	tmp_src = (const unsigned char *) src;
-	while (n-- > 0)
+	while (n > 0)
+	{
 		*tmp_dst++ = *tmp_src++;
+		n--;
+	}
 	return (dst);
 }

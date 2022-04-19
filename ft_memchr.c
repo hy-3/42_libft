@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:36:42 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/15 21:25:34 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/19 11:14:32 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,12 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	tmp_s = (unsigned char *) s;
 	tmp_c = c;
-	while (n-- > 0)
+	while (n > 0)
 	{
 		if (*tmp_s == tmp_c)
 			return (tmp_s);
 		tmp_s++;
+		n--;
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:37:10 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/15 21:25:57 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/19 11:23:49 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,20 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char_dst = (unsigned char *) dst;
 	char_src = (const unsigned char *) src;
 	if (dst < src)
-		while (len--)
+	{
+		while (len > 0)
+		{
 			*char_dst++ = *char_src++;
+			len--;
+		}
+	}
 	else
-		while (len--)
+	{
+		while (len > 0)
+		{
+			len--;
 			*(char_dst + (len)) = *(char_src + (len));
+		}
+	}
 	return (dst);
 }

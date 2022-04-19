@@ -6,7 +6,7 @@
 /*   By: hiyamamo <hiyamamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:35:11 by hiyamamo          #+#    #+#             */
-/*   Updated: 2022/04/18 20:13:35 by hiyamamo         ###   ########.fr       */
+/*   Updated: 2022/04/19 10:55:34 by hiyamamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*res;
 
+	if (size != 0)
+		if (count > SIZE_MAX / size)
+			return (NULL);
 	res = (void *) malloc(count * size);
 	if (res == NULL)
 		return (NULL);

@@ -10,19 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *str);
+#include "libft.h"
 
 /**
- * @brief Return new string which concatenate [s1] and [s2]
+ * @brief Return new string which concatenate [s1] and [s2].
  * 
- * @param s1(char const *): Prifix string
- * @param s2(char const *): Suffix string
- * @return (unsigned int): New string ([s1] + [s2])
+ * @param s1(char const *): Prifix string.
+ * @param s2(char const *): Suffix string.
+ * @return (char *): New string ([s1] + [s2]).
  */
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	unsigned int	total_len;

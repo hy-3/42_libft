@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
-
-void	ft_bzero(void *s, size_t n);
+#include "libft.h"
 
 /**
  * @brief Allocates [count] objects which are [size] bytes to memory.

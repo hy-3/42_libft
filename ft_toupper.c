@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @brief Convert capital case character to lower case.
+ * 
+ * @param c(int): Given character.
+ * @return (int): Lower case character or asis.
+ */
 int	ft_toupper(int c)
 {
 	if (96 < c && c < 123)

@@ -10,8 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
+/**
+ * @brief Count length of a given string[str].
+ *
+ * @param str(const char *): Source string.
+ * @return (size_t): Length of string.
+ */
 size_t	ft_strlen(const char *str)
 {
 	int	count;

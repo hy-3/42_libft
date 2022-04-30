@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/**
+ * @brief Apply a function to each node's content.
+ * 
+ * @param lst(t_list **): Source list.
+ * @param f(void *(void *)): Pointer of function
+ *              which take node's content as an argument.
+ * @return (void)
+ */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst != NULL)

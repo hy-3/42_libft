@@ -10,8 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
+/**
+ * @brief Apply function[f] to each character of given string[s].
+ *
+ * @param s(char *): Source string.
+ * @param f(void *(unsigned int, char *)): Pointer of function to be applied.
+ * @return (void)
+ */
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;

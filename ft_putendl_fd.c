@@ -10,9 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stddef.h>
+#include "libft.h"
 
+/**
+ * @brief Output string[s] to given file discriptor[fd], followed by new line.
+ * 
+ * @param s(char *): String to output.
+ * @param fd(int): File discriptor.
+ * @return (void)
+ */
 void	ft_putendl_fd(char *s, int fd)
 {
 	int	count;

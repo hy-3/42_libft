@@ -10,10 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
 #include "libft.h"
 
+/**
+ * @brief Delete all nodes in a list[lst].
+ * 
+ * @param lst(t_list **): Source list.
+ * @param del(void *(void *)): Pointer of function to delete a content of node.
+ * @return (void)
+ */
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*current_addr;

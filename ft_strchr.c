@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 /**
  * @brief Find first occurence of [c] from [s].
@@ -23,6 +23,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	char	*new_s;
 
+	if (s == NULL)
+		return (NULL);
 	new_s = (char *) s;
 	while (*new_s != '\0')
 	{

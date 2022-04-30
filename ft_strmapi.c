@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	count_len_of_str(char const *s)
 {
@@ -24,6 +24,14 @@ int	count_len_of_str(char const *s)
 	return (count);
 }
 
+/**
+ * @brief Apply function[f] to each character of given string[s] 
+ *        & return a new string.
+ *
+ * @param s(char const *): Source string.
+ * @param f(char *(unsigned int, char)): Pointer to function to apply to char.
+ * @return (char *): New string after function[f] applied.
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		len_of_s;

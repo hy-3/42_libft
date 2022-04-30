@@ -10,10 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
 #include "libft.h"
 
+/**
+ * @brief Create a new node with [content].
+ * 
+ * @param content(void *): Content to be added in a node.
+ * @return (t_list *): Pointer to be created new node.
+ */
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*res;

@@ -10,8 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
+/**
+ * @brief Write [len] bytes of char[c] to string[b].
+ *
+ * @param b(void *): Target string.
+ * @param c(int): Character to be written.
+ * @param len(size_t): Bytes to be write.
+ * @return (void *): Target string[b].
+ */
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*tmp_b;

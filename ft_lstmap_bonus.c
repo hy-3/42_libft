@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/**
+ * @brief Apply funtion[f] to contents of nodes in given list[lst].
+ * 
+ * @param lst(t_list **): Source list.
+ * @param f(void *(void *)): Pointer to function to apply to content of node.
+ * @param del(void *(void *)): Pointer to function to delete content of node.
+ * @return (t_list *): New list after function is applied to content of node.
+ */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*old;

@@ -10,8 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
+/**
+ * @brief Compare [s1] and [s2]. Both strings are assumed to be [n] bytes.
+ *
+ * @param s1(const void *): Source string.
+ * @param s2(const void *): Source string.
+ * @param n(size_t): Assumed bytes size of both strings.
+ * @return (int): Retuen 0 if [s1] and [s2] are identical.
+ *                Otherwise, return a difference of char([s1] - [s2]).
+ */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*char_s1;

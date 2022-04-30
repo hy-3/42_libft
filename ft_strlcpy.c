@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-size_t	ft_strlen(const char *str);
+#include "libft.h"
 
 /**
  * @brief Copy strings(from [src] to [dst]) up to [dstsize] - 1 characters.

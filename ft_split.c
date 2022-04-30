@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int	count_num_of_strings(char const *s, char c)
 {
@@ -90,8 +89,8 @@ void	free_if_malloc_failed(char **res, int num_of_strings)
 /**
  * @brief Split [s] based on [c] delimiter.
  *
- * @param c(char): Delimiter.
  * @param s(char const *s): Source string to split.
+ * @param c(char): Delimiter.
  * @return (char **): The array of string which has each splitted string.
  */
 char	**ft_split(char const *s, char c)

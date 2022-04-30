@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *str);
+#include "libft.h"
 
 char	*cust_malloc(unsigned int start, size_t len, size_t len_s, int flag)
 {
@@ -34,11 +31,11 @@ char	*cust_malloc(unsigned int start, size_t len, size_t len_s, int flag)
 }
 
 /**
- * @brief Get substring from [s]. It begins from [start] and max isze of [len]
+ * @brief Get substring from [s]. Begin from [start] and max size of [len].
  *
- * @param s(char const *): 
- * @param start(unsigned int): 
- * @param len(size_t): 
+ * @param s(char const *): Source string.
+ * @param start(unsigned int): Start position to get substring.
+ * @param len(size_t): Max size.
  * @return (char *): Substring. NULL if the allocation fails.
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len)

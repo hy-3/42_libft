@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	count_digits(int n)
 {
@@ -27,6 +27,12 @@ int	count_digits(int n)
 	return (count);
 }
 
+/**
+ * @brief Convert integer to string.
+ * 
+ * @param n(int): Source integer.
+ * @return (char *): Converted string.
+ */
 char	*ft_itoa(int n)
 {
 	int		digit;

@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 /**
  * @brief Find the first occurence of [c] from [s].
  *
- * @param s(void *): Pointer to source.
+ * @param s(const void *): Pointer to source.
  * @param c(int): Char which will be looked for.
  * @param n(size_t): Bytes to look for.
  * @return (void *): Pointer to the byte located or
- * NULL if [c] doesn't exist in [n] bytes.
+ *                   NULL if [c] doesn't exist in [n] bytes.
  */
 void	*ft_memchr(const void *s, int c, size_t n)
 {

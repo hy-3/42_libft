@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-size_t	ft_strlen(const char *str);
+#include "libft.h"
 
 /**
  * @brief Concatenate string from [src] to [dst]
@@ -21,8 +19,9 @@ size_t	ft_strlen(const char *str);
  * @param dst(char *): Pointer to destination string.
  * @param src(const char *): Pointer to source string.
  * @param dstsize(size_t): Size to concatenate.
- * @return IF (length of [dst] < [dstsize]) -> length of [src] + length of [dst]
- *         ELSE -> length of [src] + [dstsize].
+ * @return (size_t):
+ *    If (length of [dst] < [dstsize]) -> length of [src] + length of [dst]
+ *    Else -> length of [src] + [dstsize].
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

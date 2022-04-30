@@ -10,8 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
+/**
+ * @brief Writes [n] bytes of 0 to [s].
+ *
+ * @param s(void *): Target string.
+ * @param n(size_t): Bytes of writing 0.
+ * @return (void)
+ */
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*char_s;

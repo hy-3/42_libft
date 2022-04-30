@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	count_positive_int_digits(int n)
 {
@@ -47,6 +47,13 @@ int	base_ten_power(int n)
 	return (res);
 }
 
+/**
+ * @brief Output given integer[i] to given file discriptor[fd].
+ * 
+ * @param n(int): Integer to output.
+ * @param fd(int): File discriptor.
+ * @return (void)
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	int		digit;

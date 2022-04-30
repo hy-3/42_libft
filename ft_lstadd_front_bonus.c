@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/**
+ * @brief Add a new node[new] to beginning of the list[lst].
+ * 
+ * @param lst(t_list **): Source list.
+ * @param new(t_list *): Node to be added.
+ * @return (void)
+ */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	t_list	*tmp;

@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @brief Check if given char[i] is alphabet or number.
+ * 
+ * @param i(int): Character which will be checked.
+ * @return (int): If it is true, return 1. If not, return 0.
+ */
 int	ft_isalnum(int i)
 {
 	if ((64 < i && i < 91) || (96 < i && i < 123) || (47 < i && i < 58))

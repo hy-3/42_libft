@@ -10,9 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <limits.h>
+#include "libft.h"
 
+/**
+ * @brief Convert string to integer.
+ * 
+ * @param str(const char *): Source string.
+ * @return (int): Converted integer.
+ */
 int	ft_atoi(const char *str)
 {
 	int		i;

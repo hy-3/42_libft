@@ -10,13 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-size_t	ft_strlen(const char *str);
+#include "libft.h"
 
 /**
  * @brief Find the last occurrence of [c] from [s].
- * \0 is considered as part of source.
+ *        \0 is considered as part of source.
  *
  * @param s(const char *): Pointer to source.
  * @param c(int): Char which will be looked for.

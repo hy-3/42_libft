@@ -2,7 +2,7 @@
 
 Replicated functions in standard C library, Libc (not limited to only functions in Libc) and made an own library.
 
-# Usage
+## Usage
 
 ```
 $ make bonus

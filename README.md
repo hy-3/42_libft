@@ -1,10 +1,11 @@
 # Libft (C library)
 
-Replicated functions in standard C library, Libc (not limited to only functions in Libc) and made an own library.
+It's a library which replicates functions in standard C library (Libc).
+
 
 ## Usage
 
 ```
-$ make bonus
+$ make
 $ gcc <your c file> libft.a
 ```
